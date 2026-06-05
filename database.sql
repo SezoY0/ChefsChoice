@@ -52,6 +52,16 @@ CREATE TABLE kortingscodes (
     actief TINYINT(1) DEFAULT 1
 );
 
+CREATE TABLE reviews (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL,
+    naam VARCHAR(100) NOT NULL,
+    beoordeling INT NOT NULL,
+    bericht TEXT NOT NULL,
+    datum TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (product_id) REFERENCES producten(id)
+);
+
 INSERT INTO producten (naam, prijs, beschrijving, categorie, afbeelding) VALUES
 ('Japans koksmes', 89.95, 'Scherp mes voor vlees, vis en groenten.', 'Messen', 'koksmes.png'),
 ('Broodmes', 34.95, 'Kartelmes om brood netjes te snijden.', 'Messen', 'broodmes.png'),
