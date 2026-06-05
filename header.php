@@ -17,6 +17,7 @@
         <a href="winkelwagen.php">Winkelwagen</a>
          <a href="review.php">Reviews</a>
         <?php if (isset($_SESSION['gebruiker_id'])): ?>
+            <a href="account.php">Profile</a>
             <a href="logout.php">Uitloggen</a>
         <?php else: ?>
             <a href="login.php">Inloggen</a>
