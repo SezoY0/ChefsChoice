@@ -13,7 +13,7 @@
     <nav>
        
         <a href="index.php">Home</a>
-        <a href="gerechten.php">Gerechten</a>
+        <a href="gerechten.php">Producten</a>
         <a href="winkelwagen.php">Winkelwagen</a>
          <a href="review.php">Reviews</a>
         <?php if (isset($_SESSION['gebruiker_id'])): ?>
