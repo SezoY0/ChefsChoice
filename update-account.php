@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param('ssi', $naam, $email, $_SESSION['gebruiker_id']);
     $stmt->execute();
 
-    $_SESSION['flag'] = "gelukt";
+    $_SESSION['flashMessage'] = "gelukt";
 
     header('Location: account.php');
     exit;
