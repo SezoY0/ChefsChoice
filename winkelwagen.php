@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </tr>
         <?php foreach ($winkelwagen as $id => $aantal): ?>
             <?php
-            $stmt = $conn->prepare("SELECT * FROM gerechten WHERE id = ?");
+            $stmt = $conn->prepare("SELECT * FROM producten WHERE id = ?");
             $stmt->bind_param('i', $id);
             $stmt->execute();
             $gerecht = $stmt->get_result()->fetch_assoc();
