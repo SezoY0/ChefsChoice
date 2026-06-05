@@ -11,10 +11,13 @@ $stmt->bind_param('i', $_SESSION['gebruiker_id']);
 $stmt->execute();
 $result = $stmt->get_result();
 $gebruiker = $result->fetch_assoc();
+
+$flashMessage = $_SESSION['flashMessage'];
+unset($_SESSION['flashMessage']);
 ?>
 
 <?php include 'header.php'?>
-<?php if ($_SESSION['flag']){?>
+<?php if ($flashMessage){?>
 <div class="message">
     <p>Account succesvol bij gewerkt</p>
 </div>
